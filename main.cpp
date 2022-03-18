@@ -15,7 +15,6 @@ void push(Node *&head, int x)
     newNode->next = head;
     head = newNode;
 }
-
 bool pop(Node *&head, int &value)
 {
     if (!head)
@@ -35,6 +34,16 @@ void outputStack(Node *head)
     }
 }
 
+// AT TAIL
+void enqueue()
+{
+}
+
+// AT BEGINNING
+void dequeue()
+{
+}
+
 int main()
 {
 
@@ -51,9 +60,22 @@ int main()
 
     int value;
     pop(head, value);
-    cout<<value;
+    cout << value;
 
     outputStack(head);
 
     delete[] head;
 }
+
+struct Stack
+{
+    Node *pStack = nullptr;
+
+    // operations
+    void push2(int x);
+    void pop2(int x);
+};
+
+void Stack::push2(int x) // push2 belong to the stack
+
+    // different between struct and class
